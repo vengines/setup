@@ -8,6 +8,8 @@ if [ "$EUID" -ne 0 ]
   exit
 fi
 # Setup -------------------------------------------------------------------------
+# DONT ALLOW CONTINUATION WITH FAILED PARTS set -e
+set -e
 echo "Proxmox container Ubuntu 22.04 Setup Script add user and mod to sudo group"
 echo "Enter Username to add."
 read user_name
