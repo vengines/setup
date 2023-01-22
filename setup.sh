@@ -1,4 +1,4 @@
-  GNU nano 6.2                                                         setup_cont.sh                                                                  #!/usr/bin/env bash
+#!/usr/bin/env bash
 # shellcheck disable=SC1090
 
 # Proxmox container Ubuntu 22.04 Setup Script add user and mod to sudo group
