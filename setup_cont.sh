@@ -24,23 +24,23 @@ echo
 
 #Get username to add as sudo user
 echo "Enter Username to add."
-read  user_name
+read  user_name >&1
 echo
 # Add the username without asking for (name,room number, etc)
 echo "Adding username $user_name"
 echo
-adduser --gecos "" "$user_name" 
+adduser --gecos "" "$user_name" >&1
 echo
 # Add the created user to sudo 
 echo "Adding username $user_name to sudo"
-usermod -aG sudo "$user_name"
+usermod -aG sudo "$user_name" >&1
 echo
 echo "User added to sudo"
 echo
 
 # Update the server and upgrade
 echo "Updating..."
-apt update && apt upgrade -y
+apt update && apt upgrade -y >&1
 echo
 # Completed message
 echo "Done Updating.....Complete"
