@@ -12,10 +12,10 @@ if [ "$EUID" -ne 0 ]
 fi
 
 #Get setup script
-wget wget https://raw.githubusercontent.com/vengines/setup/main/setup.sh
+wget wget https://raw.githubusercontent.com/vengines/setup/main/setup_cont.sh
 
 #make it exeucatible
-chmod +x setup.sh
+chmod +x setup_cont.sh
 
 #run the script
-./setup.sh
+./setup_cont.sh
