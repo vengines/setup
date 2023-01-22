@@ -15,10 +15,10 @@ echo "Enter Username to add."
 read -p user_name < /dev/tty
 echo
 echo "Adding username $user_name"
-adduser --gecos $user_name
+adduser --gecos "$user_name"
 echo
 echo "Adding username $user_name to sudo"
-usermod -aG $user_name
+usermod -aG "$user_name"
 echo "DONE USER MODS"
 echo
 echo "Updating Server"
