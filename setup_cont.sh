@@ -14,8 +14,12 @@ echo "Proxmox container Ubuntu 22.04 Setup Script add user and mod to sudo group
 echo "Enter Username to add."
 read  user_name < /dev/tty
 echo
+echo "Enter Password for user"
+read user_pass < /dev/tty
+echo
 echo "Adding username $user_name"
-adduser --gecos "$user_name"
+echo
+adduser --gecos -p "$user_pass" "$user_name"
 echo
 echo "Adding username $user_name to sudo"
 usermod -aG "$user_name"
