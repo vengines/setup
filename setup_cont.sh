@@ -27,7 +27,8 @@ echo
 # Add the username without asking for (name,room number, etc)
 echo "Adding username $user_name"
 echo
-echo -e adduser --gecos "" "$user_name" 
+adduser --gecos "" "$user_name" 
+passwd "$user_name"
 echo
 # Add the created user to sudo 
 echo "Adding username $user_name to sudo"
