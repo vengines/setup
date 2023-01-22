@@ -16,7 +16,7 @@ fi
 
 set -e
 # start of script
-echo "Proxmox container Ubuntu 22.04 Setup Script add user and mod to sudo group"
+echo -e "Proxmox container Ubuntu 22.04 Setup Script add user and mod to sudo group"
 echo "Then update Ubuntu"
 echo
 
