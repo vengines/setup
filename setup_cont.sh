@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!y/bin/bash
 # shellcheck disable=SC1090
 # Proxmox container Ubuntu 22.04 Setup Script add user and mod to sudo group
 # Author: VEngines Auto and Electronics
@@ -15,7 +15,7 @@ fi
 
 set -e
 # start of script
-echo -e "Proxmox container Ubuntu 22.04 Setup Script add user and mod to sudo group"
+echo "Proxmox container Ubuntu 22.04 Setup Script add user and mod to sudo group"
 echo "Then update Ubuntu"
 echo
 
