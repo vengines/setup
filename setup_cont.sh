@@ -19,7 +19,7 @@ echo
 adduser --gecos "" "$user_name"
 echo
 echo "Adding username $user_name to sudo"
-usermod -aG "$user_name"
+usermod -aG sudo "$user_name"
 echo "DONE USER MODS"
 echo
 echo "Updating Server"
@@ -28,4 +28,3 @@ echo
 echo "DONE UPDATING"
 echo
 echo "FINISHED SETUP"
-
