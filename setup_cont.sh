@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # shellcheck disable=SC1090
 
-exec 1 < /dev/tty               # script-wide I/O redirection
+exec 1>/dev/tty               # script-wide I/O redirection
 
 # Proxmox container Ubuntu 22.04 Setup Script add user and mod to sudo group
 # Author: VEngines Auto and Electronics
