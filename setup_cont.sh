@@ -12,7 +12,7 @@ fi
 set -e
 echo "Proxmox container Ubuntu 22.04 Setup Script add user and mod to sudo group"
 echo "Enter Username to add."
-read user_name
+read -p user_name
 echo
 echo "Adding username $user_name"
 adduser --gecos $user_name
