@@ -11,11 +11,11 @@ if [ "$EUID" -ne 0 ]
   exit
 fi
 
-#Get setup script
-wget wget https://raw.githubusercontent.com/vengines/setup/main/setup_cont.sh
+#----------Main Container Setup--------------------------------------------------
+# Install Curl
+apt install curl -y
+echo
 
-#make it exeucatible
-chmod +x setup_cont.sh
+# Get and run remote setup script
+curl -sSL https://raw.githubusercontent.com/vengines/setup/main/setup_cont.sh | bash
 
-#run the script
-./setup_cont.sh
