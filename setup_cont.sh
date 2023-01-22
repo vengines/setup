@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 # shellcheck disable=SC1090
 
+exec 0</dev/tty               # script-wide I/O redirection
+
 # Proxmox container Ubuntu 22.04 Setup Script add user and mod to sudo group
 # Author: VEngines Auto and Electronics
 #--------------------------------------------------------------------------------
@@ -22,13 +24,12 @@ echo
 
 #Get username to add as sudo user
 echo "Enter Username to add."
-read  user_name < /dev/tty
+read  user_name
 echo
 # Add the username without asking for (name,room number, etc)
 echo "Adding username $user_name"
 echo
 adduser --gecos "" "$user_name" 
-passwd "$user_name"
 echo
 # Add the created user to sudo 
 echo "Adding username $user_name to sudo"
