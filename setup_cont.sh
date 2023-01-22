@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Proxmox container Ubuntu 22.04 Setup Script add user and mod to sudo group
 # Author: VEngines Auto and Electronics
 #--------------------------------------------------------------------------------
