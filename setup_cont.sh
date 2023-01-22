@@ -19,7 +19,7 @@ read user_pass < /dev/tty
 echo
 echo "Adding username $user_name"
 echo
-adduser --gecos -p "$user_pass" "$user_name"
+adduser --gecos "$user_name" -p "$user_pass"
 echo
 echo "Adding username $user_name to sudo"
 usermod -aG "$user_name"
