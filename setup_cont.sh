@@ -24,17 +24,10 @@ echo
 echo "Enter Username to add."
 read  user_name < /dev/tty
 echo
-
-# get the password for the account
-echo "Enter Password"
-read user_pass < /dev/tty
-echo
 # Add the username without asking for (name,room number, etc)
 echo "Adding username $user_name"
 echo
-adduser --gecos "" "$user_name"
-echo -e "$user_pass" 
-echo -e "$user_pass"
+adduser --gecos "" "$user_name" | stdin
 echo
 # Add the created user to sudo 
 echo "Adding username $user_name to sudo"
