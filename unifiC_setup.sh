@@ -13,8 +13,12 @@ fi
 
 #Credits to Original Author of Scrips and info
 echo "Unifi Update/Install scripts are from GLENNR // UNIFI INSTALLATION SCRIPTS"
-echo "Scripts are pulled directly from his maintained source"
+echo "Scripts are pulled directly from Authors maintained source"
 echo "All Credits to the original Author for the awesome scripts"
+echo
+echo "# Author   |  Glenn R."
+echo "# Email    |  glennrietveld8@hotmail.nl"
+echo "# Website  |  https://GlennR.nl"
 echo
 echo "Supported OS: Ubuntu 16.04/18.04/18.10/19.04/19.10/20.04/20.10/21.04/21.10/22.04/22.10/23.04"
 echo "and Debian 8/9/10/11/12"
@@ -33,6 +37,7 @@ select option in Update Install Quit; do
     echo "Running Update Script please wait..."
     echo
     rm unifi-update.sh &> /dev/null; wget https://get.glennr.nl/unifi/update/unifi-update.sh && bash unifi-update.sh
+    echo
     break
     ;;
 
@@ -41,6 +46,7 @@ select option in Update Install Quit; do
     echo "Running Install Script please wait..."
     echo
     rm unifi-latest.sh &> /dev/null; wget https://get.glennr.nl/unifi/install/install_latest/unifi-latest.sh && bash unifi-latest.sh
+    echo
     break
     ;;
   Quit)
