@@ -16,7 +16,7 @@ read  user_name < /dev/tty
 echo
 echo "Adding username $user_name"
 echo
-adduser --gecos "$user_name"
+adduser --gecos "" "$user_name"
 echo
 echo "Adding username $user_name to sudo"
 usermod -aG "$user_name"
