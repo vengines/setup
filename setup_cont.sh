@@ -2,24 +2,50 @@
 # shellcheck disable=SC1090
 # Proxmox container Ubuntu 22.04 Setup Script add user and mod to sudo group
 # Author: VEngines Auto and Electronics
-#--------------------------------------------------------------------------------
-# Check for root to run script
+##################################################################################
+#                       Check for root to run script
+##################################################################################
 
 if [ "$EUID" -ne 0 ]
   then echo "Please run as root"
   exit
 fi
 
-# Setup -------------------------------------------------------------------------
+##################################################################################
+#                          Setup 
+##################################################################################
 # DONT ALLOW CONTINUATION WITH FAILED PARTS set -e
 
 set -e
-# start of script
+
+##################################################################################
+#         LOGO
+##################################################################################
+logo(){
+  #can't have a bash script without a cool logo :D
+  echo -e '
+\        /|===== |\    | |======  || |\    | |===== |=====
+ \      / |      | \   | |        || | \   | |      |
+  \    /  |==    |  \  | |  ===|  || |  \  | |==    |=====|
+   \  /   |      |   \ | |     |  || |   \ | |            |
+    \/    |===== |    \| |=====|  || |    \| |=====  =====|
+
+
+
+'
+sleep(10) < /dev/tty
+}
+ logo < /dev/tty
+##################################################################################
+##################################################################################
+#                              start of script
+##################################################################################
+
 echo -e "Proxmox container Ubuntu 22.04 Setup Script add user and mod to sudo group"
 echo -e "Then update Ubuntu"
 echo -e
 
-#Get username to add as sudo user
+# Get username to add as sudo user
 echo -e "Enter Username to add."
 read  user_name < /dev/tty
 echo -e
@@ -34,8 +60,9 @@ usermod -aG sudo "$user_name" < /dev/tty
 echo -e
 echo -e "User added to sudo"
 echo -e
-
-# Update the server and upgrade
+##############################################################################
+#                         Update the server and upgrade
+##############################################################################
 echo -e "Updating..."
 apt update && apt upgrade -y < /dev/tty
 echo -e
