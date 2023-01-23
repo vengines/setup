@@ -1,4 +1,5 @@
 #!y/bin/bash
+exec < /dev/tty
 # shellcheck disable=SC1090
 # Proxmox container Ubuntu 22.04 Setup Script add user and mod to sudo group
 # Author: VEngines Auto and Electronics
@@ -15,29 +16,29 @@ fi
 
 set -e
 # start of script
-echo "Proxmox container Ubuntu 22.04 Setup Script add user and mod to sudo group"
-echo "Then update Ubuntu"
-echo
+echo -e "Proxmox container Ubuntu 22.04 Setup Script add user and mod to sudo group"
+echo -e "Then update Ubuntu"
+echo -e
 
 #Get username to add as sudo user
-echo "Enter Username to add."
-read  user_name < /dev/tty
-echo
+echo -e "Enter Username to add."
+read  user_name # < /dev/tty
+echo -e
 # Add the username without asking for (name,room number, etc)
-echo "Adding username $user_name"
+echo -e "Adding username $user_name"
 echo
-adduser --gecos "" "$user_name" < /dev/tty
-echo
+adduser --gecos "" "$user_name" # < /dev/tty
+echo -e
 # Add the created user to sudo
-echo "Adding username $user_name to sudo"
-usermod -aG sudo "$user_name" < /dev/tty
-echo
-echo "User added to sudo"
-echo
+echo -e "Adding username $user_name to sudo"
+usermod -aG sudo "$user_name" #< /dev/tty
+echo -e
+echo -e "User added to sudo"
+echo -e
 
 # Update the server and upgrade
-echo "Updating..."
-apt update && apt upgrade -y < /dev/tty
-echo
+echo -e "Updating..."
+apt update && apt upgrade -y #< /dev/tty
+echo -e
 # Completed message
-echo "Done Updating.....Complete"
+echo -e "Done Updating.....Complete"
