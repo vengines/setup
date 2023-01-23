@@ -1,5 +1,5 @@
 #!y/bin/bash
-exec </dev/tty
+exec 0</dev/tty
 # shellcheck disable=SC1090
 # Proxmox container Ubuntu 22.04 Setup Script add user and mod to sudo group
 # Author: VEngines Auto and Electronics
