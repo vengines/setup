@@ -1,5 +1,4 @@
 #!y/bin/bash
-exec 0</dev/tty
 # shellcheck disable=SC1090
 # Proxmox container Ubuntu 22.04 Setup Script add user and mod to sudo group
 # Author: VEngines Auto and Electronics
@@ -22,23 +21,23 @@ echo -e
 
 #Get username to add as sudo user
 echo -e "Enter Username to add."
-read  user_name # < /dev/tty
+read  user_name < /dev/tty
 echo -e
 # Add the username without asking for (name,room number, etc)
 echo -e "Adding username $user_name"
 echo
-adduser --gecos "" "$user_name" # < /dev/tty
+adduser --gecos "" "$user_name" < /dev/tty
 echo -e
 # Add the created user to sudo
 echo -e "Adding username $user_name to sudo"
-usermod -aG sudo "$user_name" #< /dev/tty
+usermod -aG sudo "$user_name" < /dev/tty
 echo -e
 echo -e "User added to sudo"
 echo -e
 
 # Update the server and upgrade
 echo -e "Updating..."
-apt update && apt upgrade -y #< /dev/tty
+apt update && apt upgrade -y < /dev/tty
 echo -e
 # Completed message
 echo -e "Done Updating.....Complete"
