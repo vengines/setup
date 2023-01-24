@@ -11,3 +11,11 @@ apt install -y curl && curl -sSL https://raw.githubusercontent.com/vengines/setu
 For Unifi Controller Setup RUN:
 
 wget https://raw.githubusercontent.com/vengines/setup/main/unifiC_setup.sh && chmod +x unifiC_setup.sh && ./unifiC_setup.sh
+
+-------------------------------------------------------------------------------
+
+To grab python networking files for Pihole Automation 
+
+RUN svn export https://github.com/vengines/setup/trunk/network
+
+-------------------------------------------------------------------------------
