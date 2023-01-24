@@ -16,6 +16,6 @@ wget https://raw.githubusercontent.com/vengines/setup/main/unifiC_setup.sh && ch
 
 To grab python networking files for Pihole Automation 
 
-RUN svn export https://github.com/vengines/setup/trunk/network
+svn export https://github.com/vengines/setup/trunk/network
 
 -------------------------------------------------------------------------------
